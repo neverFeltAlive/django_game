@@ -1,0 +1,32 @@
+{% extends 'shipbattle/base_light.html' %}
+{% load static %}
+
+{% block form %}
+<h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
+<hr />
+<div class="form-floating">
+    <input type="email" class="form-control signup" id="email" placeholder="name@example.com">
+    <label for="floatingInput">Email address</label>
+</div>
+<div class="form-floating">
+    <input type="text" class="form-control signup" id="username" placeholder="Gangster123">
+    <label for="username">Username</label>
+</div>
+<div class="form-floating">
+    <input type="password" class="form-control signup" id="password" placeholder="Password">
+    <label for="password">Password</label>
+</div>
+<div class="form-floating">
+    <input type="password" class="form-control signup" id="passwordConfirm" placeholder="Password Confirm">
+    <label for="passwordConfirm">Password Confirm</label>
+</div>
+<div class="checkbox mb-3">
+    <label>
+        <input type="checkbox" value="remember-me"> I agree to whatever terms this site has
+    </label>
+</div>
+<button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+<hr />
+<p>Already have an account? <a class="link-primary" href="{% url 'login' %}">Login.</a></p>
+<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+{% endblock %}
