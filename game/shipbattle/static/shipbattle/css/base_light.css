@@ -38,18 +38,16 @@ body {
 
 .form-signin input.login[type="password"] {
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
-.form-signin input.signup[type="password"][id='password'] {
+.form-signin input.signup[id='id_password1'] {
   margin-bottom: -1px;
   margin-top: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.form-signin input.signup[type="password"]#passwordConfirm {
+.form-signin input.signup[id='id_password2'] {
   margin-top: -1px;
   margin-bottom: 10px;
   border-top-left-radius: 0;

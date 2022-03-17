@@ -4,20 +4,20 @@
 {% block form %}
 <h1 class="h3 mb-3 fw-normal">Please Login</h1>
 <hr />
-<div class="form-floating">
-    <input type="email" class="form-control login" id="email" placeholder="name@example.com">
-    <label for="email">Email address</label>
-</div>
-<div class="form-floating">
-    <input type="password" class="form-control login" id="password" placeholder="Password">
-    <label for="password">Password</label>
-</div>
-
+{% for input in form %}
+{% if input.label == 'Checkbox' %}
 <div class="checkbox mb-3">
     <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        {{ input }} Remember me
     </label>
 </div>
+{% else %}
+<div class="form-floating">
+    {{ input }}
+    <label for="{{ input.id_for_label }}">{{ input.label }}</label>
+</div>
+{% endif %}
+{% endfor %}
 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
 <hr />
 <p>Don't have an account yet? <a class="link-primary" href="{% url 'sign_up' %}">Sign Up now.</a></p>
