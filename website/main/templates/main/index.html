@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block main %}
+<main class="px-3">
+    <h1>Ship Battle</h1>
+    <br />
+    <p class="lead">Simple Web Application where you can play <strong>"Ship Battle"</strong> online. <br><small class="text-white-50">Made with Python and Django. Styled with Bootstrap.</small></p>
+    <br />
+    <p class="lead">
+        <a href="{% url 'play' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Play Now</a>
+    </p>
+</main>
+{% endblock %}

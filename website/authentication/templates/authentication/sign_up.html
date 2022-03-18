@@ -1,0 +1,25 @@
+{% extends 'authentication/base_light.html' %}
+{% load static %}
+
+{% block form %}
+<h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
+{% for input in form %}
+{% if input.label == 'Checkbox' %}
+<div class="checkbox mb-3">
+    <label>
+        {{ input }} I agree to whatever terms this site has
+    </label>
+</div>
+{% else %}
+<div class="form-floating">
+    {{ input }}
+    <label for="{{ input.id_for_label }}">{{ input.label }}</label>
+</div>
+{% endif %}
+{% endfor %}
+<hr />
+<button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+<hr />
+<p>Already have an account? <a class="link-primary" href="{% url 'login' %}">Login.</a></p>
+<p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+{% endblock %}
