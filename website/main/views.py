@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 menu = [
-    {'name': 'Home', 'url': 'home'},
-    {'name': 'About', 'url': 'about'},
-    {'name': 'Play', 'url': 'play'},
+    {'name': 'Home', 'url': 'main:home'},
+    {'name': 'About', 'url': 'main:about'},
+    {'name': 'Play', 'url': 'main:play'},
 ]
 
 
@@ -76,5 +76,5 @@ def server_error(request):
         'text': 'We are deeply sorry, but the server ran into some issues processing your request. ' +
                 'Contact support for more information'
     }
-    return render(request, 'shipbattle/server_errors.html', context=context)
+    return render(request, 'main/server_errors.html', context=context)
 # endregion

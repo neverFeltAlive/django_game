@@ -20,6 +20,9 @@
 {% endfor %}
 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
 <hr />
-<p>Don't have an account yet? <a class="link-primary" href="{% url 'sign_up' %}">Sign Up now.</a></p>
+<p>Don't have an account yet? <a class="link-primary" href="{% url 'authentication:sign_up' %}">Sign Up now.</a><br />
+    <small>Forgot your password? <a class="link-secondary"
+            href="{% url 'authentication:password_reset' %}">Reset it.</a></small>
+</p>
 <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
 {% endblock %}

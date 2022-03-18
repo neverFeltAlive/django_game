@@ -24,7 +24,7 @@
 
 {% block body %}
 
-<body class="text-center">
+<body>
     <header>
         <div class="toast-container" style="position: absolute; top: 10px; right: 10px;">
             {% for input in form %}
@@ -46,10 +46,10 @@
     </header>
 
     {% block main %}
-    <main class="form-signin">
+    <main class="form-signin text-center">
         <form method="POST">
             {% csrf_token %}
-            <a href="{% url 'home' %}"><img class="mb-4" style="border-radius: 20px;"
+            <a href="{% url 'main:home' %}"><img class="mb-4" style="border-radius: 20px;"
                     src="{% static 'authentication/image/logo.jpg' %}" alt="" width="72" height="72"></a>
             {% block form %}{% endblock %}
         </form>

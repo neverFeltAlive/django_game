@@ -5,10 +5,15 @@
 
 /* Custom default button */
 .btn-secondary,
-.btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+.btn-secondary:hover{
+  background-color: transparent;
+  border-color: white;
+  color: white;
 }
 
 

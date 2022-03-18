@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('', include('authentication.urls')),
+    path('', include('game.urls')),
 ]
 
 handler400 = 'main.views.bad_request'                     # bad request
