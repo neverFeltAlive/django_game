@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block body %}
+{% block header %}
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Simple Web Application where you can play <strong>"Ship
+                            Battle"</strong>
+                        online. <br><small class="text-white-50">Made with Python and Django. Styled with
+                            Bootstrap.</small>
+                    </p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4 text-center">
+                    <h4 class="text-white">Menu</h4>
+                    <ul class="list-unstyled">
+                        {% for link in menu %}
+                        {% if link.name == active_link %}
+                        <li><a aria-current="page" class="link-secondary" href="{% url link.url %}">{{link.name}}</a>
+                        </li>
+                        {% else %}
+                        <li><a class="link-secondary" href="{% url link.url %}">{{link.name}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <hr class="text-white text-center w-1" />
+                    <h4 class="text-white">{{ request.user.username }}</h4>
+                    {% if request.user.is_authenticated %}
+                    <ul class="list-unstyled" aria-labelledby="navbarDropdown">
+                        <li><a class="link-secondary" href="{% url 'authentication:profile' %}">View Prifile</a></li>
+                        <li><a class="link-secondary" href="{% url 'authentication:password_change' %}">Change
+                                Password</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li class="text-center">
+                            <a class="nav-item btn btn-outline-danger"
+                                href="{% url 'authentication:logout' %}"><b>Logout</b></a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <h3 class="float-md-start mb-0"><a class="text-white" style="text-decoration: none;"
+                    href="{% url 'main:home' %}">Ship Battle</a></h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block main %}{% endblock %}
+
+<div class="text-center">
+    <br />
+    <br />
+    {% include 'main/base_footer.html' %}
+    <br />
+</div>
+
+{% include 'main/base_scripts.html' %}
+<script src="{% static 'main/js/toast_handler.js' %}"></script>
+
+{% endblock %}

@@ -1,69 +1,74 @@
-{% extends 'main/base.html' %}
+{% extends 'main/base_full.html' %}
 {% load static %}
 
 {% block main %}
-
-<div id="carouselExampleCaptions" class="carousel slide w-100 h-100" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-    </div>
-    <div class="carousel-inner" style="min-height: 100%;">
-        <div class="carousel-item active h-100">
-            <div class="row h-100">
-                <div class="center-block h-100" style="padding: 10%; padding-left: 30%; padding-right: 30%;">
-                    <img src="{% static 'main/image/ship1.png' %}" width="140" height="140" class="mb-4" style="border-radius: 50px;opacity:0.6;filter:alpha(opacity=50);"> 
-                    <div>
-                        <h2>Classic</h2>
-                        <p>Classic game we all now and love. Familiar rules and traditional gameplay will result in great
-                            experience
-                            for you and your friends.</p>
-                        <hr />
-                    </div>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white" style="min-width: 90%;" href="#">Play against AI</a></p>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white disabled" style="min-width: 90%;" href="#">Play against a friend</a></p>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white disabled" style="min-width: 90%;" href="#">Random match online</a></p>
-                    <p><a class="nav-link link-secondary fw-bold disabled" href="#"><strong>#rules</strong></a></p>
-                </div>
-                <!-- <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div> -->
-            </div>
+<main>
+    <div id="carouselExampleCaptions" class="carousel slide w-100 h-100 text-center" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="bg-dark active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="bg-dark"
+                aria-label="Slide 2"></button>
         </div>
-        <div class="carousel-item" style="min-height: 100%;">
-            <div class="row h-100">
-                <div class="center-block h-100" style="padding: 10%; padding-left: 30%; padding-right: 30%;">
-                    <img src="{% static 'main/image/ship2.png' %}" width="140" height="140" class="mb-4" style="border-radius: 50px;opacity:0.6;filter:alpha(opacity=50);"> 
-                    <div>
-                        <h2>Extended</h2>
-                        <p>A unique variation of a classic game. It has a bit more rules but much more
-                            possibilities,
-                            strategies and most importantly - fun. Excelent for those who want to try something new.
-                        </p>
-                        <hr />
+        <div class="carousel-inner" style="min-height: 100%;">
+            <div class="carousel-item active h-100">
+                <div class="row h-100">
+                    <div class="center-block h-100" style="padding: 10%; padding-left: 40%; padding-right: 40%;">
+                        <img src="{% static 'main/image/ship1.png' %}" width="140" height="140" class="mb-4"
+                            style="border-radius: 50px;opacity:0.6;filter:alpha(opacity=50);">
+                        <div>
+                            <h2>Classic</h2>
+                            <p>Classic game we all now and love. Familiar rules and traditional gameplay will result in
+                                great
+                                experience
+                                for you and your friends.</p>
+                            <hr />
+                        </div>
+                        <p><a class="btn btn-secondary fw-bold text-white" style="min-width: 90%;" href="#">Play against
+                                AI</a></p>
+                        <p><a class="btn btn-secondary fw-bold text-white disabled" style="min-width: 90%;"
+                                href="#">Play against a friend</a></p>
+                        <p><a class="btn btn-secondary fw-bold text-white disabled" style="min-width: 90%;"
+                                href="#">Random match online</a></p>
+                        <p><a class="nav-link link-secondary fw-bold" href="#"><strong>#rules</strong></a></p>
                     </div>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white disabled" style="min-width: 90%;" href="#">Play against AI</a></p>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white disabled" style="min-width: 90%;" href="#">Play against a friend</a></p>
-                    <p><a class="btn btn-secondary fw-bold border-white bg-white disabled" style="min-width: 90%;" href="#">Random match online</a></p>
-                    <p><a class="nav-link link-secondary fw-bold disabled" href="#"><strong>#rules</strong></a></p>
                 </div>
             </div>
+            <div class="carousel-item" style="min-height: 100%;">
+                <div class="row h-100">
+                    <div class="center-block h-100" style="padding: 10%; padding-left: 40%; padding-right: 40%;">
+                        <img src="{% static 'main/image/ship2.png' %}" width="140" height="140" class="mb-4"
+                            style="border-radius: 50px;opacity:0.6;filter:alpha(opacity=50);">
+                        <div>
+                            <h2>Extended</h2>
+                            <p>A unique variation of a classic game. It has a bit more rules but much more
+                                possibilities,
+                                strategies and most importantly - fun. Excelent for those who want to try something new.
+                            </p>
+                            <hr />
+                        </div>
+                        <p><a class="btn btn-secondary fw-bold text-white disabled" style="min-width: 90%;"
+                                href="#">Play against AI</a></p>
+                        <p><a class="btn btn-secondary fw-bold text-white disabled" style="min-width: 90%;"
+                                href="#">Play against a friend</a></p>
+                        <p><a class="btn btn-secondary fw-bold text-white disabled" style="min-width: 90%;"
+                                href="#">Random match online</a></p>
+                        <p><a class="nav-link link-secondary fw-bold" href="#"><strong>#rules</strong></a></p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-<div class="container marketing">
-
-</div>
+    <div class="container marketing">
+</main>
 {% endblock %}

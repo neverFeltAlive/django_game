@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="toast-container" style="position: absolute; top: 10px; right: 10px;">
+    {% for input in form %}
+    {% if input.errors %}
+    <div class="toast fade" role="alert" aria-live="assertive" aria-atomic="true" data-error-field="{{ input.id_for_label }}">
+        <div class="toast-header">
+            <img src="{% static 'authentication/image/logo.jpg' %}" class="rounded me-2" width="20" height="20">
+            <strong class="me-auto">Ship Battle</strong>
+            <small toast-time>Now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{ input.errors }}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
