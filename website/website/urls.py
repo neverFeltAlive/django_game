@@ -22,6 +22,7 @@ urlpatterns = [
     path('', include('main.urls')),
     path('', include('authentication.urls')),
     path('', include('game.urls')),
+    path('chat/', include('chat.urls')),
 ]
 
 handler400 = 'main.views.bad_request'                     # bad request
